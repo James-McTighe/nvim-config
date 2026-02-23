@@ -46,6 +46,13 @@ return {
         desc = "Open DiffView",
         mode = "n",
       },
+      {
+        prefix .. "C",
+        "<Cmd>DiffviewClose<CR>",
+        desc = "Close DiffView",
+        mode = "n",
+
+      }
     },
     specs = {
       {
