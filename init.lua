@@ -71,16 +71,18 @@ dracula.setup({
   -- overrides the default highlights with table see `:h synIDattr`
   -- overrides = {},
   -- You can use overrides as table like this
-  overrides = {
-    NonText = { fg = "white" }, -- set NonText fg to white
-    NvimTreeIndentMarker = { link = "NonText" }, -- link to NonText highlight
-    Nothing = {} -- clear highlight of Nothing
-  },
+  -- overrides = {
+  --   NonText = { fg = "white" }, -- set NonText fg to white
+  --   NvimTreeIndentMarker = { link = "NonText" }, -- link to NonText highlight
+  --   Nothing = {} -- clear highlight of Nothing
+  -- },
   -- Or you can also use it like a function to get color from theme
-  -- overrides = function (colors)
-  --   return {
-  --     NonText = { fg = colors.white }, -- set NonText fg to white of theme
-  --   }
-  -- end,
+  overrides = function (colors)
+    return {
+      NonText = { fg = colors.white }, -- set NonText fg to white of theme
+      NeogitDiffAdd = { fg = colors.green, bg = colors.menu },
+      DiffAdd = { fg = colors.green, bg = colors.bg }
+    }
+  end,
 })
 vim.cmd.colorscheme "dracula"
