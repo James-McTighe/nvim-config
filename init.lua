@@ -30,3 +30,4 @@ o.listchars = {
   tab = '╏ ',
   nbsp = '␣',
 }
+vim.cmd.colorscheme "nightfox"
