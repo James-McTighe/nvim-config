@@ -8,6 +8,7 @@ return {
     default_commands = true,
   },
   keys = {
+    { "<leader>m", desc = "Conflict Resolution" },
     { "<leader>mo", "<cmd>GitConflictChooseOurs<cr>", desc = "Conflict: Choose Ours" },
     { "<leader>mt", "<cmd>GitConflictChooseTheirs<cr>", desc = "Conflict: Choose Theirs" },
     { "<leader>mb", "<cmd>GitConflictChooseBoth<cr>", desc = "Conflict: Choose Both" },
