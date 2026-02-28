@@ -109,21 +109,6 @@ return {
     },
   },
   {
-    "SuperBo/fugit2.nvim",
-    lazy = true,
-    opts = {
-      width = 100,
-    },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-    },
-    cmd = { "Fugit2", "Fugit2Diff", "Fugit2Graph" },
-    keys = {
-      { "<leader>gf", mode = "n", desc = "Fugit2", "<cmd>Fugit2<cr>" },
-    },
-  },
-  {
     "pwntester/octo.nvim",
     dependencies = {
       "nvim-telescope/telescope.nvim",
