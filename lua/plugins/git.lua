@@ -105,7 +105,7 @@ return {
       })
     end,
     keys = {
-      { "<leader>gi", mode = "n", desc = "Generate .gitignore", "<cmd>Gitignore<cr>" },
+      { "<leader>ga", mode = "n", desc = "Generate .gitignore", "<cmd>Gitignore<cr>" },
     },
   },
   {
