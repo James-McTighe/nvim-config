@@ -12,6 +12,12 @@ return {
             preset = "sidebar",
             fullscreen = false,
           }
+        },
+        lines = {
+          layout = {
+            -- preset = "sidebar",
+            preview = true,
+          }
         }
       }
     }
