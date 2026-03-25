@@ -1,4 +1,4 @@
-local prefix = "gl"
+local prefix = "<leader>k"
 return {
     "dnlhc/glance.nvim",
     cmd = "Glance",
@@ -6,6 +6,9 @@ return {
         border = {
             enable = true,
         },
+        defaults = {
+          [prefix] = { name = "glance" }
+        }
     },
   keys = {
     {
