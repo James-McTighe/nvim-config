@@ -19,7 +19,7 @@ return {
     }
   },
   opts = {
-    start_at_launch = true,
+    start_at_launch = false,
     work_duration = 25,
     break_duration = 5,
     delay_duration = 1, -- The additionnal work time you get when you delay a break
