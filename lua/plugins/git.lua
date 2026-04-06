@@ -42,8 +42,14 @@ return {
     keys = {
       {
         prefix .. "D",
-        "<Cmd>DiffviewOpen<CR>",
-        desc = "Open DiffView",
+        function ()
+          vim.ui.input({prompt = "Compare with branch: "}, function(input)
+            if input then
+              vim.cmd("DiffviewOpen " .. input)
+            end
+          end)
+        end,
+        desc = "DiffView a branch",
         mode = "n",
       },
       {
