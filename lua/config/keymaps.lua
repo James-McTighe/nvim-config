@@ -2,8 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- 1. Remove the default <leader>l mapping
-vim.keymap.del("n", "<leader>l")
+-- In lua/config/keymaps.lua
+-- Force delete the existing mapping if it's already set
+vim.keymap.del("n", "<leader>gd")
 
--- 2. Add the new <leader>ll mapping for the Lazy menu
-vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
+-- Then set your new one
+vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<cr>", { desc = "Diffview Open" })

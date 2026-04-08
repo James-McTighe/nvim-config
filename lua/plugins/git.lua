@@ -1,31 +1,8 @@
 local prefix = "<Leader>g"
 return {
   {
-    "NeogitOrg/neogit",
-    lazy = true,
-    cmd = "Neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    keys = {
-      {
-        prefix .. "n",
-        "<Cmd>Neogit<CR>",
-        desc = "Open Neogit Tab Page",
-        mode = "n",
-      },
-    },
-
-    specs = {
-      {
-        "catppuccin",
-        optional = true,
-        opts = { integrations = { neogit = true } },
-      },
-    },
-  },
-  {
     "sindrets/diffview.nvim",
+    lazy = true,
     cmd = { "DiffviewOpen" },
     opts = {
       enhanced_diff_hl = true,
@@ -41,6 +18,12 @@ return {
     },
     keys = {
       {
+        prefix .. "d",
+        "<Cmd>DiffviewOpen<CR>",
+        desc = "Open DiffView",
+        mode = "n"
+      },
+      {
         prefix .. "D",
         function ()
           vim.ui.input({prompt = "Compare with branch: "}, function(input)
@@ -53,7 +36,7 @@ return {
         mode = "n",
       },
       {
-        prefix .. "C",
+        prefix .. "c",
         "<Cmd>DiffviewClose<CR>",
         desc = "Close DiffView",
         mode = "n",
@@ -112,16 +95,6 @@ return {
     end,
     keys = {
       { "<leader>ga", mode = "n", desc = "Generate .gitignore", "<cmd>Gitignore<cr>" },
-    },
-  },
-  {
-    "pwntester/octo.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-    },
-    opts = {
-      users = "assignable", -- Users for assignees or reviewers. Values: "search" | "mentionable" | "assignable"
-      default_merge_method = "squash", -- default merge method which should be used for both `Octo pr merge` and merging from picker, could be `commit`, `rebase` or `squash`
     },
   },
 }
