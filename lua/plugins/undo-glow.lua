@@ -26,7 +26,7 @@ return {
         hl_color = { bg = "#1DA1F2" }, -- Twitter blue
       },
       comment = {
-        hl_color = { bg = "#325B5B" }, -- Dark muted cyan
+        hl_color = { bg = "#57595D" }, -- bright grey
       },
       cursor = {
         hl_color = { bg = "#793D54" }, -- Dark muted pink
