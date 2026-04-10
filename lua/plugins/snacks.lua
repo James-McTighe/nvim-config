@@ -17,6 +17,14 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = false },
+    terminal = {
+      win = {
+        style = "float",
+        width = 0.9,
+        height = 0.9,
+        border = true,
+      }
+    },
     picker = {
       layout = {
         fullscreen = true
