@@ -1,14 +1,13 @@
 return {
     "rachartier/tiny-glimmer.nvim",
     event = "VeryLazy",
-    priority = 10, -- Low priority to catch other plugins' keybindings
     config = function()
         require("tiny-glimmer").setup({
             -- Enable/disable the plugin
-            enabled = true,
+            enabled = false,
 
             -- Disable warnings for debugging highlight issues
-            disable_warnings = false,
+            disable_warnings = true,
 
             -- Automatically reload highlights when colorscheme changes
             -- When enabled, cached highlights will be refreshed on ColorScheme autocmd
@@ -31,24 +30,23 @@ return {
 
                 -- Yank operation animation
                 yank = {
-                    enabled = false,
+                    enabled = true,
                     default_animation = "fade",
                 },
 
                 -- Search navigation animation
                 search = {
-                    enabled = true,
+                    enabled = false,
                     default_animation = "pulse",
                     next_mapping = "n", -- Key for next match
                     prev_mapping = "N", -- Key for previous match
                 },
 
                 -- Paste operation animation
-                -- Paste operation animation
                 paste = {
                     enabled = false,
                     default_animation = "reverse_fade",
-                    -- paste_mapping = "p", -- Paste after cursor
+                    paste_mapping = "p", -- Paste after cursor
                     Paste_mapping = "P", -- Paste before cursor
                 },
 
@@ -113,7 +111,7 @@ return {
             },
 
             -- Override background color for animations (for transparent backgrounds)
-            transparency_color = "#000000",
+            transparency_color = nil,
 
             -- Animation configurations
             animations = {
