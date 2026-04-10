@@ -23,10 +23,10 @@ return {
         hl_color = { bg = "#325B5B" }, -- Dark muted cyan
       },
       search = {
-        hl_color = { bg = "#5C475C" }, -- Dark muted purple
+        hl_color = { bg = "#1DA1F2" }, -- Twitter blue
       },
       comment = {
-        hl_color = { bg = "#7A5A3D" }, -- Dark muted orange
+        hl_color = { bg = "#325B5B" }, -- Dark muted cyan
       },
       cursor = {
         hl_color = { bg = "#793D54" }, -- Dark muted pink
@@ -76,7 +76,7 @@ return {
       function()
         require("undo-glow").search_next({
           animation = {
-            animation_type = "strobe",
+            animation_type = "fade",
           },
         })
       end,
@@ -89,7 +89,7 @@ return {
       function()
         require("undo-glow").search_prev({
           animation = {
-            animation_type = "strobe",
+            animation_type = "fade",
           },
         })
       end,
@@ -102,7 +102,7 @@ return {
       function()
         require("undo-glow").search_star({
           animation = {
-            animation_type = "strobe",
+            animation_type = "fade",
           },
         })
       end,
@@ -115,7 +115,7 @@ return {
       function()
         require("undo-glow").search_hash({
           animation = {
-            animation_type = "strobe",
+            animation_type = "fade",
           },
         })
       end,
@@ -185,7 +185,7 @@ return {
         ---@type UndoGlow.CommandOpts
         local opts = {
           animation = {
-            animation_type = "slide",
+            animation_type = "fade",
           },
         }
 
