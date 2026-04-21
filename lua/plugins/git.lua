@@ -43,13 +43,29 @@ return {
 
       }
     },
-    specs = {
-      {
-        "NeogitOrg/neogit",
-        optional = true,
-        opts = { integrations = { diffview = true } },
-      },
-    },
+    config = function(_, opts)
+    require("diffview").setup(opts)
+
+    -- Define custom colors
+    local function set_colors()
+      -- Background colors for the actual diff hunks
+      vim.api.nvim_set_hl(0, "DiffAdd", { bg = "#2d3f34", fg = "NONE" })
+      vim.api.nvim_set_hl(0, "DiffDelete", { bg = "#442b2d", fg = "NONE" })
+      vim.api.nvim_set_hl(0, "DiffChange", { bg = "#394b70", fg = "NONE" })
+      vim.api.nvim_set_hl(0, "DiffText", { bg = "#686b2a", fg = "NONE" })
+      
+      -- Sidebar / Status colors (filenames in the file panel)
+      vim.api.nvim_set_hl(0, "DiffviewStatusAdded", { fg = "#b8bb26", bold = true })
+      vim.api.nvim_set_hl(0, "DiffviewStatusModified", { fg = "#fabd2f", bold = true })
+      vim.api.nvim_set_hl(0, "DiffviewStatusDeleted", { fg = "#fb4934", bold = true })
+    end
+
+    -- Apply colors now and whenever the colorscheme changes
+    set_colors()
+    vim.api.nvim_create_autocmd("ColorScheme", {
+      callback = set_colors,
+    })
+  end,
   },
   {
     "wintermute-cell/gitignore.nvim",
