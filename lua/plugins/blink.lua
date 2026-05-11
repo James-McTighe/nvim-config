@@ -15,6 +15,9 @@ return {
             },
 
             completion = {
+                keyword = {
+                    range = "full",
+                },
                 list = {
                     selection = {
                         -- Set to false so the first item isn't automatically highlighted.
@@ -27,6 +30,10 @@ return {
                 menu = {
                     -- Optional: auto_show makes the menu appear as you type.
                     auto_show = true,
+                    border = "rounded",
+                },
+                documentation = {
+                    window = { border = "rounded" },
                 },
                 ghost_test = { enabled = true },
             },
