@@ -14,12 +14,28 @@ local function python_env()
     return ""
 end
 
+local icons = LazyVim.config.icons
+
 return {
     "nvim-lualine/lualine.nvim",
     opts = {
         sections = {
-            lualine_c = { "branch", "diff", "diagnostics" },
-            lualine_x = { python_env },
+            lualine_b = { "branch", "diff" },
+            lualine_c = {
+                python_env,
+            },
+            lualine_x = {
+                "filetype",
+                {
+                    "diagnostics",
+                    symbols = {
+                        error = icons.diagnostics.Error,
+                        warn = icons.diagnostics.Warn,
+                        info = icons.diagnostics.Info,
+                        hint = icons.diagnostics.Hint,
+                    },
+                },
+            },
             lualine_z = {
                 { "datetime", style = "%I:%M %p" }, -- %I is 12hr, %p is AM/PM
             },
