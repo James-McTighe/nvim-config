@@ -3,7 +3,7 @@ return
 {
     "David-Kunz/gen.nvim",
     opts = {
-        model = "deepseek-r1:8b", -- The default model to use.
+        model = "qwen2", -- The default model to use.
         quit_map = "q", -- set keymap to close the response window
         retry_map = "<c-r>", -- set keymap to re-send the current prompt
         accept_map = "<c-cr>", -- set keymap to replace the previous selection with the last result
