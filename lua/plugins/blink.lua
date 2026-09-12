@@ -28,12 +28,21 @@ return {
                     },
                 },
                 menu = {
-                    -- Optional: auto_show makes the menu appear as you type.
                     auto_show = true,
                     border = "rounded",
+                    winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+                    draw = {
+                        treesitter = { "lsp" },
+                        columns = {
+                            { "kind_icon" },
+                            { "label", "label_description", gap = 1 },
+                            { "source_name" },
+                        },
+                    },
                 },
                 documentation = {
                     window = { border = "rounded" },
+                    winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
                 },
                 ghost_text = { enabled = true },
             },

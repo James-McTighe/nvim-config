@@ -29,7 +29,7 @@ return {
         init = function()
             vim.g.mkdp_auto_close = 0
         end,
-        ft = { "markdown" },
+        ft = { "markdown", "codecompanion" },
         keys = {
             {
                 "<leader>mp",
@@ -73,6 +73,11 @@ return {
                     enable_hybrid_mode = true,
                     linewise_hybrid_mode = true,
                     icon_provider = "internal",
+                    filetypes = {
+                        "markdown",
+                        "codecompanion",
+                    },
+                    ignore_bufftypes = {},
                 },
             }
         end,

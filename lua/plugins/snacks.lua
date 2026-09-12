@@ -1,49 +1,95 @@
 return {
-  "folke/snacks.nvim",
-  event = "VeryLazy",
-  priority = 11,
-  opts = {
-    bigfile = { enabled = true },
-    dashboard = { enabled = true },
-    explorer = { enabled = true },
-    indent = { enabled = true },
-    input = { enabled = true },
-    notifier = {
-      enabled = true,
-      timeout = 4000,
-    },
-    quickfile = { enabled = true },
-    scope = { enabled = true },
-    scroll = { enabled = true },
-    statuscolumn = { enabled = true },
-    words = { enabled = false },
-    terminal = {
-      win = {
-        style = "float",
-        width = 0.9,
-        height = 0.9,
-        border = true,
-      }
-    },
-    picker = {
-      layout = {
-        fullscreen = true
-      },
-      sources = {
-        -- Override for teh explorer specifically
-        explorer = {
-          layout = {
-            preset = "sidebar",
-            fullscreen = false,
-          }
+    "folke/snacks.nvim",
+    event = "VeryLazy",
+    priority = 11,
+    opts = {
+        bigfile = { enabled = true },
+        dashboard = { enabled = false },
+        explorer = { enabled = true },
+        indent = { enabled = true },
+        input = { enabled = true },
+        notifier = {
+            enabled = true,
+            timeout = 4000,
+            border = "rounded",
         },
-        lines = {
-          layout = {
-            -- preset = "sidebar",
-            preview = true,
-          }
-        }
-      }
-    }
-  }
+        quickfile = { enabled = true },
+        scope = { enabled = true },
+        scroll = { enabled = true },
+        statuscolumn = { enabled = true },
+        words = { enabled = false },
+        terminal = {
+            win = {
+                style = "float",
+                width = 0.9,
+                height = 0.9,
+                border = "double",
+            },
+        },
+        layouts = {
+            default = {
+                layout = {
+                    box = "horizontal",
+                    backdrop = 60,
+                    width = 0.85,
+                    min_width = 120,
+                    height = 0.80,
+                    {
+                        box = "vertical",
+                        border = "rounded",
+                        title = "{source} {live}",
+                        title_pos = "center",
+                        { win = "input", height = 1, border = "bottom" },
+                        { win = "list", border = "none" },
+                    },
+                    {
+                        win = "preview",
+                        title = "{preview}",
+                        width = 0.55,
+                        border = "rounded",
+                        title_pos = "center",
+                    },
+                },
+            },
+            vertical = {
+                layout = {
+                    box = "vertical",
+                    backdrop = 60,
+                    width = 0.7,
+                    min_width = 80,
+                    height = 0.85,
+                    border = "rounded",
+                    title = "{source} {live}",
+                    title_pos = "center",
+                    { win = "input", height = 1, border = "bottom" },
+                    { win = "list", border = "none" },
+                    { win = "preview", title = "{preview}", height = 0.45, border = "top" },
+                },
+            },
+        },
+        picker = {
+            ui_select = true,
+            border = "rounded",
+            layout = {
+                preset = "vertical",
+                cycle = false,
+                backdrop = 60,
+            },
+            sources = {
+                -- Override for teh explorer specifically
+                explorer = {
+                    layout = {
+                        preset = "sidebar",
+                        fullscreen = false,
+                        preview = "main",
+                    },
+                },
+                lines = {
+                    layout = {
+                        preview = true,
+                    },
+                },
+            },
+        },
+    },
 }

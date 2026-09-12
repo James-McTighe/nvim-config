@@ -53,7 +53,6 @@ return {
       vim.api.nvim_set_hl(0, "DiffDelete", { bg = "#442b2d", fg = "NONE" })
       vim.api.nvim_set_hl(0, "DiffChange", { bg = "#394b70", fg = "NONE" })
       vim.api.nvim_set_hl(0, "DiffText", { bg = "#686b2a", fg = "NONE" })
-      
       -- Sidebar / Status colors (filenames in the file panel)
       vim.api.nvim_set_hl(0, "DiffviewStatusAdded", { fg = "#b8bb26", bold = true })
       vim.api.nvim_set_hl(0, "DiffviewStatusModified", { fg = "#fabd2f", bold = true })
