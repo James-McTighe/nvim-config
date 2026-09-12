@@ -35,7 +35,7 @@ return {
                 documentation = {
                     window = { border = "rounded" },
                 },
-                ghost_test = { enabled = true },
+                ghost_text = { enabled = true },
             },
         },
         -- set style for ghost text
