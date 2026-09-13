@@ -47,8 +47,18 @@ return {
         },
         use_libuv_file_watcher = true,
         window = {
-            position = "left",
+            position = "float",
             width = 40,
+            popup = {
+                size = {
+                    width = "60%",
+                    height = "70%",
+                },
+                border = {
+                    style = "double",
+                    highlight = "FloatBorder",
+                },
+            },
             mappings = {
                 ["h"] = function(state)
                     local node = state.tree:get_node()
@@ -70,9 +80,9 @@ return {
                 last_indent_marker = "└",
                 highlight = "NeoTreeIndentMarker",
                 with_expanders = true,
-                expander_collapsed = "",
-                expander_expanded = "",
             },
+            file_size = { enabled = true },
+            type = { enabled = true },
         },
     },
 }
