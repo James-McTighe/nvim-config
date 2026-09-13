@@ -18,7 +18,7 @@ local theme = {
         z = { fg = colors.white, bg = colors.blue },
     },
     insert = {
-        a = { fg = colors.black, bg = colors.light_green },
+        a = { fg = colors.black, bg = colors.green },
     },
     visual = {
         a = { fg = colors.black, bg = colors.orange },
@@ -73,12 +73,24 @@ return {
                     source = { "nvim" },
                     sections = { "error" },
                     diagnostics_color = { error = { bg = colors.red, fg = colors.black } },
+                    always_visible = true,
                 },
                 {
                     "diagnostics",
                     source = { "nvim" },
                     sections = { "warn" },
                     diagnostics_color = { warn = { bg = colors.orange, fg = colors.black } },
+                    always_visible = true,
+                },
+                {
+                    "diagnostics",
+                    source = { "nvim" },
+                    sections = { "info", "hint" },
+                    diagnostics_color = {
+                        info = { bg = colors.light_green, fg = colors.black },
+                        hint = { bg = colors.light_green, fg = colors.black },
+                    },
+                    always_visible = true,
                 },
                 { modified, color = { bg = colors.red } },
                 {
