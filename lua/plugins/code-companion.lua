@@ -43,7 +43,7 @@ return {
             schema = {
               model = {
                 -- Qwen 2.5 7B fits completely in 8 GB VRAM with fast response times[cite: 1]
-                default = "qwen2.5:7b",
+                default = "qwen2.5-coder:7b",
               },
               num_ctx = {
                 -- Fits comfortably in 8 GB VRAM at 4-bit quantization[cite: 1]
