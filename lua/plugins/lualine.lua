@@ -67,6 +67,7 @@ return {
             lualine_b = {
                 "branch",
                 "diff",
+                { "filename", file_status = false, path = 1 },
                 {
                     "diagnostics",
                     source = { "nvim" },
@@ -79,7 +80,6 @@ return {
                     sections = { "warn" },
                     diagnostics_color = { warn = { bg = colors.orange, fg = colors.black } },
                 },
-                { "filename", file_status = false, path = 1 },
                 { modified, color = { bg = colors.red } },
                 {
                     "%w",
