@@ -4,8 +4,8 @@ return {
   priority = 11,
   opts = {
     bigfile = { enabled = true },
-    dashboard = { enabled = false },
-    explorer = { enabled = true },
+    dashboard = { enabled = true },
+    explorer = { enabled = false },
     indent = { enabled = true },
     input = { enabled = true },
     notifier = {
@@ -86,13 +86,6 @@ return {
         },
       },
       sources = {
-        explorer = {
-          layout = {
-            preset = "sidebar",
-            fullscreen = false,
-            preview = "main",
-          },
-        },
         lines = {
           layout = {
             preview = true,
