@@ -1,6 +1,6 @@
 return {
     "nvim-neo-tree/neo-tree.nvim",
-  lazy = false,
+    lazy = false,
     init = function()
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
@@ -9,9 +9,34 @@ return {
         {
             "<leader>e",
             function()
-                require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() })
+                require("neo-tree.command").execute({
+                    toggle = true,
+                    dir = LazyVim.root(),
+                })
             end,
             desc = "Explorer NeoTree (Root Dir)",
+        },
+        {
+            "<leader>be",
+            function()
+                require("neo-tree.command").execute({
+                    source = "buffers",
+                    position = "float",
+                    toggle = true,
+                })
+            end,
+            desc = "Open Buffer Explorer",
+        },
+        {
+            "<leader>ge",
+            function()
+                require("neo-tree.command").execute({
+                    source = "git_status",
+                    position = "float",
+                    toggle = true,
+                })
+            end,
+            desc = "Open Git Status Explorer",
         },
     },
     opts = {
