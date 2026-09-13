@@ -42,7 +42,6 @@ return {
                 },
                 documentation = {
                     window = { border = "rounded" },
-                    winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
                 },
                 ghost_text = { enabled = true },
             },
