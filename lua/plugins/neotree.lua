@@ -12,6 +12,7 @@ return {
                 require("neo-tree.command").execute({
                     toggle = true,
                     dir = LazyVim.root(),
+                    position = "float",
                 })
             end,
             desc = "Explorer NeoTree (Root Dir)",
