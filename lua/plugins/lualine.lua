@@ -107,8 +107,8 @@ return {
                     end,
                 },
             },
-            lualine_x = { "filetype" },
-            lualine_y = { "%l:%c", "%p%%/%L" },
+            lualine_x = { "" },
+            lualine_y = { "filetype", "%l:%c", "%p%%/%L" },
             lualine_z = { "datetime" },
         }),
         inactive_sections = {
