@@ -29,6 +29,10 @@ return {
         styles = {
             float = {
                 backdrop = 60,
+                border = "rounded",
+            },
+            notification = {
+                border = "rounded",
             },
         },
 
