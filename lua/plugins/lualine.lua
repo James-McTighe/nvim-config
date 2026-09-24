@@ -5,9 +5,10 @@ local colors = {
     white = "#cdd6f4", -- Text
     light_green = "#94e2d5", -- Teal (clean pastel tone for insert)
     orange = "#fab387", -- Peach
-    green = "#a6e3a1", -- Green
+    green = "#00ff7f", -- Green
     blue = "#052F5F",
     purple = "#A288E3",
+    yellow = "#fefe33",
 }
 
 local theme = {
@@ -21,7 +22,7 @@ local theme = {
         a = { fg = colors.black, bg = colors.green },
     },
     visual = {
-        a = { fg = colors.black, bg = colors.orange },
+        a = { fg = colors.black, bg = colors.yellow },
     },
     replace = {
         a = { fg = colors.black, bg = colors.red },
