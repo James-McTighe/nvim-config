@@ -67,7 +67,6 @@ return {
             lualine_b = {
                 "branch",
                 "diff",
-                { "filename", file_status = false, path = 1 },
                 {
                     "diagnostics",
                     source = { "nvim" },
