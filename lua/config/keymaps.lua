@@ -6,6 +6,7 @@
 -- Force delete the existing mapping if it's already set
 vim.keymap.del("n", "<leader>gd")
 vim.keymap.del("n", "<leader>gD")
+vim.keymap.del("n", "<leader>,")
 
 -- Then set your new one
 vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<cr>", { desc = "Diffview Open" })
