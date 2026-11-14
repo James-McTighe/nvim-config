@@ -10,6 +10,8 @@ return {
         "typescript-language-server",
         "clangd",
         "tailwindcss-language-server",
+        "debugpy",
+        "rust-analyzer",
 
         -- Linters & Formatters
         "stylua",
